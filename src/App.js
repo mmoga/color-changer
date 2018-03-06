@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux';
+
+const ColorDisplay = props => {
+  return (
+    <div>
+      This will show the color chosen
+    </div>
+  );
+}
 
 class App extends Component {
   render() {
     return (
-      <div>TEST</div>
+      <div>
+        <ColorDisplay />
+        <input type="color" name="" id=""/>
+      </div>
     );
   }
 }
