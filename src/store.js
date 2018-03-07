@@ -1,3 +1,5 @@
+import { createStore } from 'redux';
+
 // types
 const CHANGE_COLOR = 'CHANGE_COLOR';
 // actions
