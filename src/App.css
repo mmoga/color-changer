@@ -1,0 +1,13 @@
+.App {
+    display: block;
+    text-align: center;
+}
+
+.App--colorDisplay {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 250px;
+    border: 1px solid lightgrey;
+    margin-bottom: 20px;
+}

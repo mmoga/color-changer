@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
-const ColorDisplay = props => {
-  return (
-    <div>
-      This will show the color chosen
-    </div>
-  );
-}
 
 class App extends Component {
+  state = {
+    background: '#fff',
+  };
+  handleColor = (event) => {
+    this.setState({ background: event.target.value });
+    console.log(this.state.background);
+  };
   render() {
+    const divStyle = {
+      backgroundColor: this.state.background,
+    }
     return (
-      <div>
-        <ColorDisplay />
-        <input type="color" name="" id=""/>
+      <div className="App">
+        <h1>Pick a color!</h1>
+        <div className="App--colorDisplay" style={divStyle}></div>
+        <input type="color" value="#ffffff" id="" onChange={ this.handleColor }/>
       </div>
     );
   }
