@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 // types
 const CHANGE_COLOR = 'CHANGE_COLOR';
 // actions
-const changeColor = (color) => ({
+export const changeColor = (color) => ({
     type: CHANGE_COLOR,
     payload: {
         // tell it what to change
