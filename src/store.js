@@ -16,9 +16,18 @@ const initialState = {
 }
 // reducer
 const reducer = (state=initialState, action) => {
-    return state;
+    switch(action.type) {
+        case CHANGE_COLOR:
+            return {
+                ...state,
+                color: action.payload.value
+            }
+        default:
+            return state
+    }
 }
 // create store
-const store = createStore(reducer) //dev tools needs more args
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+) //dev tools needs more args
 // export store
 export default store;
