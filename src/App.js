@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 
 class App extends Component {
@@ -24,5 +24,11 @@ class App extends Component {
     );
   }
 }
+
+// mapStateToProps
+
+// mapDispatchToProps
+
+// wrap the app in connect
 
 export default App;
