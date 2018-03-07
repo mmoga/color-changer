@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Pick a color!</h1>
-        <div className="App--colorDisplay" style={divStyle}></div>
+        <div className="App--colorDisplay" style={divStyle}>YOU<br />SUCK!</div>
         <input type="color" value="#ffffff" id="" onChange={ this.handleColor }/>
       </div>
     );
