@@ -6,31 +6,20 @@ import { connect } from 'react-redux';
 
 
 class App extends Component {
-  state = {
-    background: '#fff',
-  };
-  handleColor = (event) => {
-    this.setState({ background: event.target.value });
-    console.log(this.state.background);
-  };
   render() {
-    const divStyle = {
-      backgroundColor: this.state.background,
-    }
     return (
       <div className="App">
         <h1>Pick a color!</h1>
-        <div className="App--colorDisplay" style={divStyle}>YOU<br />SUCK!</div>
-        <input type="color" value="#ffffff" id="" onChange={ this.handleColor }/>
+        <div className="App--colorDisplay">YOU<br />SUCK!</div>
+        <input type="color" value="#ffffff" />
       </div>
     );
   }
 }
 
 // mapStateToProps
-
+const mapStateToProps = null; // this should be a function, but will work with null
 // mapDispatchToProps
-
+const mapDispatchToProps = null; // this will work too
 // wrap the app in connect
-
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
